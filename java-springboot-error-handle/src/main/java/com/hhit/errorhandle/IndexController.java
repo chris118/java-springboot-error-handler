@@ -9,10 +9,13 @@ public class IndexController {
 
     @RequestMapping("/index")
     public String index(ModelMap modelMap) throws Exception {
-
-        modelMap.addAttribute("userName", "chris");
-
         System.out.println("throw the exception");
         throw new Exception("");
+    }
+
+    @RequestMapping("/json")
+    public String json(ModelMap modelMap) throws Exception {
+        System.out.println("throw the exception json");
+        throw new HHException("发生错误");
     }
 }
